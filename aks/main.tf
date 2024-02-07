@@ -52,4 +52,7 @@ resource "azurerm_kubernetes_cluster" "k8squickstart" {
   tags = {
     Environment = "Production"
   }
+  depends_on = [
+    azurerm_resource_group.devrg
+  ]
 }
